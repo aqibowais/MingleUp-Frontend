@@ -10,27 +10,7 @@ function ProfilePage() {
     checkAuth()
   },[])
 
-//   const handleUploadImage = async (e) => {
-//   e.preventDefault();
-//   const file = e.target.files[0];
-//   if (!file) return;
 
-//   try {
-//     // Create FormData to send the file
-//     const formData = new FormData();
-//     formData.append("profilePic", file);
-
-//     // Update local state for UI preview (optional, using URL.createObjectURL)
-//     const imageUrl = URL.createObjectURL(file);
-//     setselectedImage(imageUrl);
-
-//     // Send the file to the backend
-//     //only send file instead of form data
-//     await updateProfile(file);
-//   } catch (error) {
-//     console.error("Error uploading image:", error);
-//   }
-// };
   const handleUploadImage = async (e) => {
     e.preventDefault()
     const file = e.target.files[0]
@@ -74,7 +54,7 @@ function ProfilePage() {
       <div className="max-w-2xl mx-auto p-4 py-8">
         <div className="bg-base-300 rounded-xl p-6 space-y-8">
           <div className="text-center">
-            <h1 className="text-2xl font-semibold">Profile</h1>
+            <h1 className="text-2xl text-primary font-semibold">Profile</h1>
             <p className="text-base mt-2">Welcome to your profile page!</p>
           </div>
           <div className="flex flex-col items-center gap-4">
@@ -112,7 +92,7 @@ function ProfilePage() {
                 />
               </label>
             </div>
-            <p className="text-sm text-zinc-400">
+            <p className="text-sm text-base-content/60">
               {isUpdatingProfile
                 ? "Uploading..."
                 : "Click the camera icon to update your photo"}
@@ -120,7 +100,7 @@ function ProfilePage() {
 
             <div className="space-y-6 w-full px-5 mb-8">
               <div className="space-y-1.5">
-                <div className="text-sm text-zinc-400 flex items-center gap-2">
+                <div className="text-sm text-base-content/60 flex items-center gap-2">
                   <User className="w-4 h-4" />
                   Full Name
                 </div>
@@ -130,7 +110,7 @@ function ProfilePage() {
               </div>
 
               <div className="space-y-1.5">
-                <div className="text-sm text-zinc-400 flex items-center gap-2">
+                <div className="text-sm text-base-content/60 flex items-center gap-2">
                   <Mail className="w-4 h-4" />
                   Email Address
                 </div>
