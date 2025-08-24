@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 import {io} from "socket.io-client"
 
 
-const SOCKET_URL = import.meta.env.MODE==="development"? "http://localhost:8000":"/"
+const SOCKET_URL = import.meta.env.MODE==="development"? "http://localhost:8000":"https://mingleup-backend.onrender.com"
 export const useAuthStore = create((set,get) => ({
   authUser: null,
   isCheckingAuth: true,
